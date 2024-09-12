@@ -1,5 +1,5 @@
-const url = process.env.BACKEND_URL;
-// const url = "https://super-duper-space-telegram-x74jvwjg9xqf6vvr-3001.app.github.dev";
+// const url = process.env.BACKEND_URL;
+const url = "https://turbo-carnival-76xgp9gjx5xhx6v7-3001.app.github.dev";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {

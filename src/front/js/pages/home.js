@@ -4,6 +4,7 @@ import "../../styles/home.css"
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom";
 
 const navigation = [
 	{ name: 'Features', href: '#' },
@@ -19,14 +20,14 @@ const Home = () => {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 transition-all duration-300 ease-in-out hover:p-3" style={{ width: '80px', height: '60px' }}>
+            <Link to="/" className="-m-1.5 p-1.5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" style={{ width: '80px', height: '60px' }}>
               <span className="sr-only">Money-Tracker</span>
               <img
                 alt="Money-Tracker Logo"
                 src={icon}
                 className="h-10 w-auto"
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -40,15 +41,19 @@ const Home = () => {
           </div>
           <div className="navigation-list hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-medium leading-6 duration-200 ease-in-out hover:scale-105">
+              <Link key={item.name} to={item.href} className="text-sm font-medium leading-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="login text-sm font-semibold leading-6 text-gray-900">
+            <Link
+              to="/login"
+              className="login text-sm font-semibold leading-6 text-gray-900 transition ease-in-out delay-150 hover:-translate-x-3 hover:scale-110 duration-300"
+              style={{ display: "inline-block", width: "auto", whiteSpace: "nowrap" }}
+            >
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

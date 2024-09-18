@@ -7,11 +7,6 @@
     --color-darkest: #161925;
 }
 
-.landing-page {
-    background-color: var(--color-darkest);
-    
-}
-
 .landing-title{
     color: var(--color-text);
 }
@@ -19,6 +14,26 @@
 .landing-text{
     color: var(--color-text);
     opacity: 50%;
+}
+
+
+
+.button-learn-more{
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.button-learn-more:hover{
+    color: var(--color-lightest);
+    transform: translateX(4px);
+}
+
+.navigation-list {
+    color: var(--color-text);
+}
+
+.login{
+    color: var(--color-text);
 }
 
 .button-get-started{
@@ -29,16 +44,4 @@
 .button-get-started:hover{
     background-color: var(--color-lightest);
     color: var(--color-darkest)
-}
-
-.button-learn-more{
-    color: var(--color-text);
-}
-
-.navigation-list {
-    color: var(--color-text);
-}
-
-.login{
-    color: var(--color-text);
 }

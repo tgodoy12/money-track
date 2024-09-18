@@ -1,7 +1,3 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
-
 :root {
     --color-text: #ecfdf5;
     --color-lightest: #CBF7ED;
@@ -11,6 +7,15 @@
     --color-darkest: #161925;
 }
 
-body {
+
+.dialog-panel {
     background-color: var(--color-darkest);
+}
+
+.navigation-list-mobile{
+    color: var(--color-text)
+}
+
+.navigation-list-mobile:hover{
+    background-color: var(--color-dark);
 }

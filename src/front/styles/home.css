@@ -1,7 +1,47 @@
-/*
-    home.css: This website contains selectors only used in home.css
+:root {
+    --color-text: #ecfdf5;
+    --color-lightest: #CBF7ED;
+    --color-light: #8EA8C3;
+    --color-medium: #406E8E;
+    --color-dark: #23395B;
+    --color-darkest: #161925;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.landing-title{
+    color: var(--color-text);
+}
+
+.landing-text{
+    color: var(--color-text);
+    opacity: 50%;
+}
+
+
+
+.button-learn-more{
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.button-learn-more:hover{
+    color: var(--color-lightest);
+    transform: translateX(4px);
+}
+
+.navigation-list {
+    color: var(--color-text);
+}
+
+.login{
+    color: var(--color-text);
+}
+
+.button-get-started{
+    background-color: var(--color-medium);
+    color: var(--color-text);
+}
+
+.button-get-started:hover{
+    background-color: var(--color-lightest);
+    color: var(--color-darkest)
+}

@@ -17,7 +17,7 @@ export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <div className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" style={{ width: '80px', height: '60px' }}>
@@ -110,7 +110,7 @@ export const Navbar = () => {
             </div>
           </DialogPanel>
         </Dialog>
-      </header>
+     </div>
   )
 }
 

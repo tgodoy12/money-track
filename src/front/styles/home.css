@@ -32,9 +32,6 @@
     color: var(--color-text);
 }
 
-.login{
-    color: var(--color-text);
-}
 
 .button-get-started{
     background-color: var(--color-medium);
@@ -45,3 +42,4 @@
     background-color: var(--color-lightest);
     color: var(--color-darkest)
 }
+

@@ -8,14 +8,21 @@
 }
 
 
-.dialog-panel {
-    background-color: var(--color-darkest);
+.nav-link{
+    color: var(--color-text);
+
+}
+.nav-link:hover{
+    color:var(--color-light)
 }
 
-.navigation-list-mobile{
-    color: var(--color-text)
+.login {
+    color: var(--color-text);
+    border-color: var(--color-text);
 }
 
-.navigation-list-mobile:hover{
-    background-color: var(--color-dark);
+.login:hover {
+    background-color: var(--color-medium);
+    color: var(--color-text);
+    border-color: var(--color-medium);
 }

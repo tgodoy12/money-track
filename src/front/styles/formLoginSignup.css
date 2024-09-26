@@ -1,7 +1,3 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
-
 :root {
     --color-text: #ecfdf5;
     --color-lightest: #CBF7ED;
@@ -11,12 +7,10 @@
     --color-darkest: #161925;
 }
 
-body {
-    background-color: var(--color-darkest);
-    font-family: monospace;
-    
+.form-login-signup{
+    width: 30rem;
 }
 
-#app {
-    min-height: 100vh;
+.form-component {
+    padding: 30px;
 }

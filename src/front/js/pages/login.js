@@ -3,11 +3,13 @@ import FormLoginSignup from "../component/formLoginSignup";
 
 //
 const Login = () => {
-    return(
-        <div className="flex items-center justify-center min-h-screen">
+    return (
+        
+        <div class="container border min-vh-100">
             <FormLoginSignup />
         </div>
-    )
+     
+      );
 }
 
 export default Login;

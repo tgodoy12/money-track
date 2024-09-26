@@ -22,7 +22,7 @@ const Layout = () => {
     if(!process.env.BACKEND_URL || process.env.BACKEND_URL == "") return <BackendURL/ >;
 
     return (
-        <div>
+        <>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
                     <Navbar />
@@ -33,10 +33,10 @@ const Layout = () => {
                         
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
-                    {/* <Footer /> */}
+                    <Footer />
                 </ScrollToTop>
             </BrowserRouter>
-        </div>
+        </>
     );
 };
 

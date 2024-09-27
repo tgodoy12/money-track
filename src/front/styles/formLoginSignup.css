@@ -7,10 +7,8 @@
     --color-darkest: #161925;
 }
 
-.form-login-signup{
-    width: 30rem;
+.formulario{
+    max-width: 450px;
+    min-width: 270px;
 }
 
-.form-component {
-    padding: 30px;
-}

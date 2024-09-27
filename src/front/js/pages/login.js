@@ -5,7 +5,7 @@ import FormLoginSignup from "../component/formLoginSignup";
 const Login = () => {
     return (
         
-        <div class="container border min-vh-100">
+        <div className="container-fluid border min-vh-100">
             <FormLoginSignup />
         </div>
      

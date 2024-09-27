@@ -6,7 +6,7 @@ const Home = () => {
   
 
   return (
-    <div className="landing-page min-h-screen mt-5">
+    <div className="landing-page min-vh-100 border mt-5">
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div

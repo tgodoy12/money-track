@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
 import icon from "../../img/icon.png";
 import "../../styles/formLoginSignup.css"
 
@@ -6,11 +9,31 @@ export default function FormLoginSignup() {
 
   const [formType, setFormType] = useState("login")
 
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      password: Yup.string()
+        .max(20, 'Must be 20 characters or less')
+        .required('Required'),
+    }),
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   return (
     <div className="d-flex flex-column vh-100 align-items-center justify-content-center">
 
       {/* formulario */}
-      <form className="formulario form-floating border p-5 w-75 mx-auto">
+      <form 
+        className="formulario form-floating border p-5 w-75 mx-auto"
+        onSubmit={formik.handleSubmit}>
 
         {/* navtab para login y signup */}
         <div className="nav-box">
@@ -56,12 +79,34 @@ export default function FormLoginSignup() {
 
         {/* inputs */}
         <div className="form-floating mb-3">
-          <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
+          <input
+            id="floatingInput"
+            name="email" 
+            type="email" 
+            className="form-control"
+            placeholder="name@example.com"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email} />
+          {formik.touched.email && formik.errors.email ? (
+            <div>{formik.errors.email}</div>
+          ) : null}
           <label htmlFor="floatingInput">Email address</label>
         </div>
 
         <div className="form-floating">
-          <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
+          <input
+            id="floatingPassword"
+            name="password"  
+            type="password" 
+            className="form-control"
+            placeholder="Password"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.password} />
+          {formik.touched.password && formik.errors.password ? (
+            <div>{formik.errors.password}</div>
+          ) : null}
           <label htmlFor="floatingPassword">Password</label>
         </div>
 
